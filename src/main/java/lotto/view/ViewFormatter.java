@@ -2,7 +2,7 @@ package lotto.view;
 
 public class ViewFormatter {
 
-    public static String LottoResultFormat(DigitsMatch message, int value) {
+    public static String lottoResultFormat(DigitsMatch message, int value) {
         return String.format(message.getMessage(), value);
     }
 

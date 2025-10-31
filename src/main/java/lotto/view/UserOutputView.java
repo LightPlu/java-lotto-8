@@ -18,7 +18,7 @@ public class UserOutputView {
         IntStream.range(0, winningStats.size())
                 .forEach(i ->
                     System.out.println(
-                            ViewFormatter.LottoResultFormat(messages.get(i), winningStats.get(i))
+                            ViewFormatter.lottoResultFormat(messages.get(i), winningStats.get(i))
                     ));
 
         System.out.println(ViewFormatter.earningRateFormat(EARNING_RATE, earningRate));
