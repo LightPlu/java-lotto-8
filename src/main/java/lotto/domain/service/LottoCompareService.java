@@ -12,7 +12,7 @@ import lotto.domain.vo.WinningLottoNumbers;
 public class LottoCompareService {
 
     public CountResult compareNumber(Lotto lotto, WinningLottoNumbers winningLottoNumbers) {
-        List<Integer> lottoNumbers = lotto.getSortedNumbers();
+        List<Integer> lottoNumbers = lotto.getNumbers();
         List<Integer> winningNumbers = winningLottoNumbers.getWinningNumbers();
         int bonusNumber = winningLottoNumbers.getBonusNumber();
 
