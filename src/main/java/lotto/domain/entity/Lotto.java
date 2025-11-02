@@ -1,6 +1,10 @@
 package lotto.domain.entity;
 
+import static lotto.exceptions.ErrorMessage.LOTTO_NUMBER_IS_NOT_DUPLICATE;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Lotto {
@@ -17,7 +21,14 @@ public class Lotto {
         }
     }
 
-    public List<Integer> getSortedNumbers() {
+    private void validateDuplicate(List<Integer> numbers) {
+        Set<Integer> unique = new HashSet<>(numbers);
+        if (unique.size() != numbers.size()) {
+            throw new IllegalArgumentException(LOTTO_NUMBER_IS_NOT_DUPLICATE.getMessage());
+        }
+    }
+
+    private List<Integer> getSortedNumbers(List<Integer> numbers) {
         return numbers.stream()
                 .sorted()
                 .collect(Collectors.toList());
