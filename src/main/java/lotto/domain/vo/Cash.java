@@ -15,7 +15,7 @@ public class Cash {
     }
 
     private void validateMoneyDivisible(int money) {
-        if (money % LOTTO_PRICE.getValue() == ZERO.getValue()) {
+        if (money % LOTTO_PRICE.getValue() != ZERO.getValue()) {
             throw new IllegalArgumentException(CASH_IS_NOT_DIVISIBLE.getMessage());
         }
     }
