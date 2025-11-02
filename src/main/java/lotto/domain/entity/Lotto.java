@@ -12,7 +12,8 @@ public class Lotto {
 
     public Lotto(List<Integer> numbers) {
         validate(numbers);
-        this.numbers = numbers;
+        validateDuplicate(numbers);
+        this.numbers = getSortedNumbers(numbers);
     }
 
     private void validate(List<Integer> numbers) {
@@ -32,6 +33,10 @@ public class Lotto {
         return numbers.stream()
                 .sorted()
                 .collect(Collectors.toList());
+    }
+
+    public List<Integer> getNumbers() {
+        return numbers;
     }
 
 }
