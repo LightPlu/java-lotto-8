@@ -3,6 +3,7 @@ package lotto.utils;
 public enum NumberConstants {
 
     LOTTO_PRICE(1000),
+    LOTTO_SIZE(6),
     ZERO(0),
     PERCENTAGE(100);
 
