@@ -16,7 +16,7 @@ public class LottoController {
     public void run() {
         int price = getPriceWithRetry();
         int count = buyLottoWithRetry(price);
-        
+
         userOutputView.printLottoCountMessage(count);
         String lottoHistory = lottoService.printLottoPurchaseHistory();
         userOutputView.printLottoHistory(lottoHistory);
