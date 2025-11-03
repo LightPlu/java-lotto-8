@@ -78,4 +78,6 @@
 
 [코드 리뷰를 통해 얻은 피드백을 통하여 이번 과제에 적용할 것 모음](https://github.com/LightPlu/java-lotto-8/blob/LightPlu/APPLY_REVIEW.md)
 
+[테스트를 왜 작성하는가?](https://github.com/LightPlu/java-lotto-8/blob/LightPlu/TEST_REASON.md)
+
 
