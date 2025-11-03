@@ -36,4 +36,8 @@ public class UserOutputView {
         System.out.println(ViewFormatter.lottoCountFormat(LOTTO_COUNT_MESSAGE, count));
     }
 
+    public void printLottoHistory(String lottoHistory) {
+        System.out.println(lottoHistory);
+    }
+
 }
