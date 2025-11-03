@@ -12,4 +12,8 @@ public interface LottoService {
 
     double totalWinningsMoney(Cash cash, LottoResult lottoResult);
 
+    String printLottoPurchaseHistory();
+
+    List<Integer> printLottoResultStatistics(List<Integer> winningNumbers, int bonusNumber);
+
 }

@@ -73,5 +73,20 @@ public class LottoServiceImpl implements LottoService {
         return lottoRepository.findAll();
     }
 
+    @Override
+    public String printLottoPurchaseHistory() {
+        List<Lotto> savedLottos = getSavedLottos();
+        StringBuilder sb = new StringBuilder();
+        savedLottos.forEach(lotto -> {
+            sb.append(lotto.getNumbers()).append("\n");
+        });
+        return sb.toString().trim();
+    }
+
+    @Override
+    public List<Integer> printLottoResultStatistics(List<Integer> winningNumbers, int bonusNumber) {
+        LottoResult result = compareLotto(winningNumbers, bonusNumber);
+        return result.getResultValuesOrdered();
+    }
 
 }
