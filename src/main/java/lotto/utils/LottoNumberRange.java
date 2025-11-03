@@ -7,6 +7,7 @@ public enum LottoNumberRange {
     OUTPUT_LOTTO_NUMBER_COUNT(6);
 
     public final int number;
+
     LottoNumberRange(int number) {
         this.number = number;
     }

@@ -10,9 +10,9 @@ public class TypeConverter {
 
     public int priceTypeConvert(String input) {
         int price = 0;
-        try{
+        try {
             price = Integer.parseInt(input);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(INPUT_VALUE_IS_INVALID.getMessage());
             throw new IllegalArgumentException(INPUT_VALUE_IS_INVALID.getMessage());
         }
@@ -21,11 +21,11 @@ public class TypeConverter {
 
     public List<Integer> winningNumberTypeConvert(String input) {
         List<Integer> winningNumbers = new ArrayList<>();
-        try{
-             winningNumbers = Arrays.stream(input.split(","))
+        try {
+            winningNumbers = Arrays.stream(input.split(","))
                     .map(Integer::parseInt)
                     .toList();
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(INPUT_VALUE_IS_INVALID.getMessage());
             throw new IllegalArgumentException(INPUT_VALUE_IS_INVALID.getMessage());
         }
@@ -34,9 +34,9 @@ public class TypeConverter {
 
     public int bonusNumberTypeConvert(String input) {
         int bonusNumber = 0;
-        try{
+        try {
             bonusNumber = Integer.parseInt(input);
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println(INPUT_VALUE_IS_INVALID.getMessage());
             throw new IllegalArgumentException(INPUT_VALUE_IS_INVALID.getMessage());
         }

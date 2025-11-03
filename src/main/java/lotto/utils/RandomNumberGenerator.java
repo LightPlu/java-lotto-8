@@ -12,7 +12,8 @@ public class RandomNumberGenerator implements RandomNumberGeneratorInterface {
 
     @Override
     public List<Integer> numberCreates() {
-    return Randoms.pickUniqueNumbersInRange(MIN_LOTTO_NUMBER.getNumber(), MAX_LOTTO_NUMBER.getNumber(), OUTPUT_LOTTO_NUMBER_COUNT.getNumber());
+        return Randoms.pickUniqueNumbersInRange(MIN_LOTTO_NUMBER.getNumber(), MAX_LOTTO_NUMBER.getNumber(),
+                OUTPUT_LOTTO_NUMBER_COUNT.getNumber());
     }
 
 }

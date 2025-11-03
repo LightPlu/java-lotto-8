@@ -20,22 +20,22 @@ public class WinningLottoNumbers {
     }
 
     private void validateBonusNumberRange(int bonusNumber) {
-        if(bonusNumber < MIN_LOTTO_NUMBER.getNumber() || bonusNumber > MAX_LOTTO_NUMBER.getNumber()) {
+        if (bonusNumber < MIN_LOTTO_NUMBER.getNumber() || bonusNumber > MAX_LOTTO_NUMBER.getNumber()) {
             throw new IllegalArgumentException(LOTTO_NUMBER_OUT_OF_BOUNDS.getMessage());
         }
     }
 
     private void validateWinningNumbersRange(List<Integer> winningNumbers) {
         winningNumbers.forEach(number -> {
-            if(number < MIN_LOTTO_NUMBER.getNumber() || number > MAX_LOTTO_NUMBER.getNumber()) {
+            if (number < MIN_LOTTO_NUMBER.getNumber() || number > MAX_LOTTO_NUMBER.getNumber()) {
                 throw new IllegalArgumentException(LOTTO_NUMBER_OUT_OF_BOUNDS.getMessage());
             }
         });
     }
 
-    private void validateWinningAndBonusDuplicate(List<Integer> winningNumbers,  int bonusNumber) {
+    private void validateWinningAndBonusDuplicate(List<Integer> winningNumbers, int bonusNumber) {
         winningNumbers.forEach(number -> {
-            if(number == bonusNumber) {
+            if (number == bonusNumber) {
                 throw new IllegalArgumentException(WINNING_NUMBER_DUPLICATE_BONUS_NUMBER.getMessage());
             }
         });

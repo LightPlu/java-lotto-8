@@ -13,16 +13,15 @@ public class UserOutputView {
     private static final String LOTTO_COUNT_MESSAGE = "%d개를 구매했습니다.";
 
 
-
     public void printTotalStatics(List<Integer> winningStats, double earningRate) {
         printWinningStaticsMessage();
         List<DigitsMatch> messages = Arrays.asList(DigitsMatch.values());
 
         IntStream.range(0, winningStats.size())
                 .forEach(i ->
-                    System.out.println(
-                            ViewFormatter.lottoResultFormat(messages.get(i), winningStats.get(i))
-                    ));
+                        System.out.println(
+                                ViewFormatter.lottoResultFormat(messages.get(i), winningStats.get(i))
+                        ));
 
         System.out.println(ViewFormatter.earningRateFormat(EARNING_RATE, earningRate));
     }

@@ -8,7 +8,6 @@ public enum ErrorMessage {
     LOTTO_NUMBER_IS_NOT_DUPLICATE("[ERROR] 로또 번호는 중복될 수 없습니다."),
     INPUT_VALUE_IS_INVALID("[ERROR] 입력값이 유효하지 않습니다.");
 
-
     private final String message;
 
     ErrorMessage(String message) {

@@ -54,13 +54,13 @@ public class LottoServiceImpl implements LottoService {
         WinningLottoNumbers winningLottoNumbers = new WinningLottoNumbers(winningNumbers, bonusNumber);
 
         List<Lotto> savedLottos = lottoRepository.findAll();
-        
+
         List<CountResult> countResults = new ArrayList<>();
         savedLottos.forEach(lotto -> {
             CountResult result = lottoCompareService.compareNumber(lotto, winningLottoNumbers);
             countResults.add(result);
         });
-        
+
         return lottoAggregateService.aggregateLottoResult(countResults);
     }
 
