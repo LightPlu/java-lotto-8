@@ -13,8 +13,8 @@ import lotto.domain.service.LottoPurchaseService;
 import lotto.domain.vo.Cash;
 import lotto.domain.vo.CountResult;
 import lotto.domain.vo.WinningLottoNumbers;
-import lotto.repository.LottoRepository;
-import lotto.repository.InMemoryLottoRepository;
+import lotto.domain.repository.LottoRepository;
+import lotto.infrastructure.InMemoryLottoRepository;
 import lotto.utils.RandomNumberGenerator;
 
 public class LottoServiceImpl implements LottoService {
