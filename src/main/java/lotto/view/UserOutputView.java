@@ -10,8 +10,11 @@ public class UserOutputView {
 
     private static final String WINNING_STATICS_MESSAGE = "당첨 통계";
     private static final String BAR = "---";
+    private static final String LOTTO_COUNT_MESSAGE = "%d개를 구매했습니다.";
 
-    public void printTotalStatics(List<Integer> winningStats, float earningRate) {
+
+
+    public void printTotalStatics(List<Integer> winningStats, double earningRate) {
         printWinningStaticsMessage();
         List<DigitsMatch> messages = Arrays.asList(DigitsMatch.values());
 
@@ -27,6 +30,10 @@ public class UserOutputView {
     private void printWinningStaticsMessage() {
         System.out.println(WINNING_STATICS_MESSAGE);
         System.out.println(BAR);
+    }
+
+    public void printLottoCountMessage(int count) {
+        System.out.println(ViewFormatter.lottoCountFormat(LOTTO_COUNT_MESSAGE, count));
     }
 
 }
