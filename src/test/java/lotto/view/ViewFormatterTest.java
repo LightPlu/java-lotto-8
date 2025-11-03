@@ -25,9 +25,9 @@ public class ViewFormatterTest {
 
     @ParameterizedTest
     @CsvSource({
-            "EARNING_RATE, 54.5, 총 수익률은 54.5%입니다."
+            "EARNING_RATE, 0.545, 총 수익률은 54.5%입니다."
     })
-    void testEarningRateFormat(DigitsMatch message, Float value, String expected) {
+    void testEarningRateFormat(DigitsMatch message, double value, String expected) {
         String result = ViewFormatter.earningRateFormat(message, value);
         assertEquals(expected, result);
     }
